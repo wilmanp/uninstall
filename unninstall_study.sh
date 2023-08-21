@@ -6,19 +6,19 @@ read study
 
 #removes enviroment folder
 # machete command
-#find ~/Desktop/$desktop -exec rm -rf {} \; 
+#find ~//miniconda3/envs/$study -exec rm -rf {} \; 
 #friendly command
 conda remove -n $study --all -y
 
-#desktop launcher
+#Desktop launcher
 desktop=$study".sh"
 
 #Deleting desktop launcher
-if [-d ~/Desktop/$desktop]: then
+if [ -e ~/Desktop/$desktop ]; then
 	find ~/Desktop/$desktop -exec rm -rf {} \; 
 	echo "desktop launcher deleted!"
-else echo "desktop launcher not found."
+else
+	echo "desktop launcher not found."
 fi
 
-
-echo "$study was succesfully uninstalled"
+echo "Finished!"

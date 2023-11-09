@@ -8,3 +8,9 @@ This script will delete 3 main things:
 - Installation script(if exists)
 
 Once you run this script, files deleted by the script will not be able to recover, so be caucious when using it.
+
+How To execute it:
+
+- Go to the terminal, type the reserverd word "bash" followed by space and the name of the script(i.e. bash machete.sh). Hit enter/return
+- Enter the study name (i.e. COMBINED-CONTROLS-A-7)and hit enter/return.
+- Wait for this script to finish.

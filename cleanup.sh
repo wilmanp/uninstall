@@ -10,7 +10,7 @@ read -p "This script will delete files 90 days or older, including installation 
 
 case $yesno in 
 	[yY]* ) echo "Ok! deleting files...";
-		find ~/Downloads/ -mtime +90 -exec rm -rf {} \;
+		find ~/Downloads/ -mtime +90 -exec rm -rf {} +;
 		rm -rf ~/.local/share/Trash/*
 		break;;
 	[nN]* ) echo "Exiting script...No files were deleted.";

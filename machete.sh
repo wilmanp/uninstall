@@ -18,31 +18,19 @@
 		echo "Study Name was not found in the computer. Please double check the name and try again."
 		exit
 	fi	
-
-	#------Friendly command
-
-	#if [ -e ~/miniconda3/envs/$study ]; then
-	#	conda remove -n $study --all -y
-	#elif [ -e /miniconda/envs/$study ]; then
-	#	conda remove -n $study --all -y
-	#else
-	#	echo "Study Name was not found in the computer. Please double check the name and try again."
-		#exit
-	#fi		
+	
 
 	#Deleting desktop launcher
 	echo "Looking for launcher..."
-	if [ -e ~/Desktop/$desktop ]; then
-		find ~/Desktop/$desktop -exec rm -rf {} \; 
+	if [ -e ~/Desktop/$desktop ]; then rm -Rf ~/Desktop/$desktop; 
 		echo "desktop launcher deleted!"
 	else
 		echo "desktop launcher not found..."
 	fi
 
 	echo "Looking for installation file: $inst"
-	if [ -e ~/Downloads/$inst ]; then
-		find ~/Downloads/$inst -exec rm -rf {} \; 
-		echo "installation scrip deleted!"
+	if [ -e ~/Downloads/$inst ]; then rm -Rf ~/Downloads/$inst; 
+		echo "installation script deleted!"
 	else
 		echo "installation script not found..."
 	fi

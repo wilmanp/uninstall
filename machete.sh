@@ -12,10 +12,8 @@
 	# machete command
 	#find ~/miniconda3/envs/$study -exec rm -rf {} \; 
 	
-	if [ -e ~/miniconda3/envs/$study ]; then
-		find ~/miniconda3/envs/$study -exec rm -rf {} \; 
-	elif [ -e /miniconda/envs/$study ]; then
-		find ~/miniconda/envs/$study -exec rm -rf {} \; 
+	if [ -d ~/miniconda3/envs/$study ]; then rm -Rf ~/miniconda3/envs/$study; 
+	elif [ -d ~/miniconda/envs/$study ]; then rm -Rf ~/miniconda3/envs/$study; 
 	else
 		echo "Study Name was not found in the computer. Please double check the name and try again."
 		exit
@@ -48,13 +46,6 @@
 	else
 		echo "installation script not found..."
 	fi
-
-
-	echo "Press enter/retun to try again. Press Esc to exit."
-    read -s -n 1 key
-    if [ "$key" == $'\x1b' ]; then
-        break  # salir con escape
-    fi
 
 
 echo "Finished!"

@@ -30,7 +30,7 @@
 
 	echo "Looking for installation file: $inst"
 	if [ -e ~/Downloads/$inst ]; then rm -Rf ~/Downloads/$inst; 
-		echo "installation script deleted!"
+		echo "installation file deleted!"
 	else
 		echo "installation script not found..."
 	fi

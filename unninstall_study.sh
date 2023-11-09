@@ -6,15 +6,23 @@ while true; do
 	echo "Type the study name and then hit enter(return):	"
 	read study
 
+
+
+
 	#Removes enviroment folder
 	# machete command
-	#find ~/miniconda3/envs/$study -exec rm -rf {} \; 
-	#friendly command
 
 	if [ -e ~/miniconda3/envs/$study ]; then
-		conda remove -n $study --all -y
-	elif [ -e /miniconda/envs/$study ]; then
-		conda remove -n $study --all -y
+		find ~/miniconda3/envs/$study -exec rm -rf {} \;
+	elif [ -e ~/miniconda/envs/$study ]; then	 
+		find ~/miniconda/envs/$study -exec rm -rf {} \;
+	
+	#friendly command
+
+	#if [ -e ~/miniconda3/envs/$study ]; then
+	#	conda remove -n $study --all -y
+	#elif [ -e /miniconda/envs/$study ]; then
+	#	conda remove -n $study --all -y
 	else
 		echo "Study Name was not found in the computer. Please double check the name and try again."
 		#exit
